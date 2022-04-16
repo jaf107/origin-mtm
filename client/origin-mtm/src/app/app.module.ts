@@ -8,7 +8,10 @@ import { NavbarComponent } from './navbar/navbar.component';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
 import { LibraryComponent } from './library/library.component';
+import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
+import { SharedService } from './shared.service';
 
 @NgModule({
   declarations: [
@@ -18,13 +21,16 @@ import { LibraryComponent } from './library/library.component';
     LoginComponent,
     RegisterComponent,
     LibraryComponent,
-    
+
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
-  providers: [],
+  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
