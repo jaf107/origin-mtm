@@ -1,0 +1,40 @@
+
+<div class="container">
+    <div class="container ">
+        
+        <button (click)="addUser()" type="submit" class="btn btn-warning flex justify center space">Add User</button>
+    </div>
+    <div class="container">
+        <table class="table table-bordered table-hover">
+            <caption>List of Users</caption>
+            <thead class="thead-dark">
+                <tr>
+                    <th>#</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Password</th>
+                    <th>Registered</th>
+                    <th>Edit</th>
+                    <th>Delete</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let user of users; let i = index">
+                    <td>{{user.id}}</td>
+                    <td>{{user.name}} </td>
+                    <td>{{user.email}} </td>
+                    <td>{{user.password}} </td>
+                    <td *ngIf="user.registered" > Registered</td>
+                    <td *ngIf="!user.registered" >Not Registered</td>
+                    
+                    <td><button (click)="editUser(user,i)" class="btn btn-warning"> Edit</button> </td>
+                    <td><button (click)="deleteUser(user)" class="btn btn-danger"> Delete</button></td>
+                </tr>
+                
+            </tbody>
+    
+        </table>
+    
+        
+    </div>
+</div>

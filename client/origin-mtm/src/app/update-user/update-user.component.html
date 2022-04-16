@@ -1,0 +1,19 @@
+<div class="container">
+    <div class="card card-container">
+       <h2 style="text-align: center;
+          margin-bottom: 10px;
+          padding: 10px;">Register</h2>
+        <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
+        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <p id="profile-name" class="profile-name-card"></p>
+        <form class="form-signin">
+            <span id="reauth-email" class="reauth-email"></span>
+            <input type="text" name="name" id="inputName" [(ngModel)]="givenUser.name" class="form-control" placeholder="Full Name" required autofocus>
+            <input type="email" name="email" id="inputEmail" class="form-control" [(ngModel)]="givenUser.email" placeholder="Email address" required >
+            <input type="password" name="password" id="inputPassword" class="form-control"[(ngModel)]="givenUser.password" placeholder="Password" required>
+ 
+            <button (click)="saveUser()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Save</button>
+        </form><!-- /form -->
+        
+    </div><!-- /card-container -->
+ </div><!-- /container -->

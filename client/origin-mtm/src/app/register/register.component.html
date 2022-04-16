@@ -8,11 +8,11 @@
        <p id="profile-name" class="profile-name-card"></p>
        <form class="form-signin">
            <span id="reauth-email" class="reauth-email"></span>
-           <input type="text" id="inputName" class="form-control" placeholder="Full Name" required autofocus>
-           <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required >
-           <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+           <input type="text" name="name" id="inputName" [(ngModel)]="newUser.name" class="form-control" placeholder="Full Name" required autofocus>
+           <input type="email" name="email" id="inputEmail" class="form-control" [(ngModel)]="newUser.email" placeholder="Email address" required >
+           <input type="password" name="password" id="inputPassword" class="form-control"[(ngModel)]="newUser.password" placeholder="Password" required>
 
-           <button class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign up</button>
+           <button (click)="registerUser()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign up</button>
        </form><!-- /form -->
        
    </div><!-- /card-container -->
