@@ -14,6 +14,7 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { SharedService } from './shared.service';
 import { UserListComponent } from './user-list/user-list.component';
 import { UpdateUserComponent } from './update-user/update-user.component';
+import { DashboardComponent } from './dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +26,7 @@ import { UpdateUserComponent } from './update-user/update-user.component';
     LibraryComponent,
     UserListComponent,
     UpdateUserComponent,
+    DashboardComponent,
 
   ],
   imports: [

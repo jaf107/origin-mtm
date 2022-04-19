@@ -15,10 +15,6 @@ export class UserListComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  addUser(){
-    this.router.navigate(['register']);
-  }
-
   deleteUser(user: User){
     // console.log(user);
     this.userService.deleteUser(user.id-1);

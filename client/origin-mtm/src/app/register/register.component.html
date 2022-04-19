@@ -11,7 +11,11 @@
            <input type="text" name="name" id="inputName" [(ngModel)]="newUser.name" class="form-control" placeholder="Full Name" required autofocus>
            <input type="email" name="email" id="inputEmail" class="form-control" [(ngModel)]="newUser.email" placeholder="Email address" required >
            <input type="password" name="password" id="inputPassword" class="form-control"[(ngModel)]="newUser.password" placeholder="Password" required>
-
+           <div id="remember" class="checkbox">
+            <label>
+                <input type="checkbox" value="agreed-to-everything"> Agree to everything?
+            </label>
+        </div>
            <button (click)="registerUser()" class="btn btn-lg btn-primary btn-block btn-signin" type="submit">Sign up</button>
        </form><!-- /form -->
        

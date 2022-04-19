@@ -3,5 +3,5 @@ export class User {
     name: string = "";
     email: string = "";
     password: string = "";
-    registered: boolean = false;
+    agreed: boolean = false; // Agreed to all regulations
 }
