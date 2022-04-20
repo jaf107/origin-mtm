@@ -20,4 +20,8 @@ export class RegisterComponent implements OnInit {
     this.router.navigate(['userlist'])
   }
 
+  login(){
+    this.router.navigate(['login']);
+  }
+
 }

@@ -10,14 +10,13 @@ import { UserService } from '../user.service';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private userService: UserService, private router:Router) { }
-  loggingInUser = new User();
+  constructor(private route: Router) { }
+
   ngOnInit(): void {
   }
 
-  loginUser(){
-    let message = this.userService.verifyUser(this.loggingInUser);
-    // console.log(message);
-    this.router.navigate(['dashboard']);
+  register(){
+    this.route.navigate(['register']);
   }
+
 }
