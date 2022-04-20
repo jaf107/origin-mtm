@@ -6,8 +6,8 @@ import { Games } from './games';
 })
 export class GamesService {
   game: Games[] = [{
-    name: "Elden Ring", descp: "The New Fantasy Action RPG", url: "./assets/images/EldenRing.jpg",
-    detail: "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    name: "Assassin’s Creed II", descp: "Action-Role Playing Game", url: "./assets/images/assasinscreed.jpg",
+    detail: "Assassin’s Creed II is a new beginning. Ancient Egypt, a land of majesty and intrigue, is disappearing in a ruthless fight for power. Unveil dark secrets and forgotten myths as you go back to the one founding moment: The Origins of the Assassin’s Brotherhood.",
     addedWishlist: false
   },
   {
@@ -31,8 +31,23 @@ export class GamesService {
     addedWishlist: false
   },
   {
+    name: "Forza Horizon 5", descp: "Racing Game", url: "./assets/images/forza-horizon-5.jpg",
+    detail: "Your Ultimate Horizon Adventure awaits! Explore the vibrant and ever-evolving open world landscapes of Mexico with limitless, fun driving action in hundreds of the world’s greatest cars.",
+    addedWishlist: false
+  },
+  {
     name: "FIFA 2022", descp: "Football Simulation Game", url: "./assets/images/FIFA2022.jpg",
     detail: "Powered by Football™, EA SPORTS™ FIFA 22 brings the game even closer to the real thing with fundamental gameplay advances and a new season of innovation across every mode.EA SPORTS™ FIFA 22 brings the game even closer to the real thing with fundamental gameplay advances and a new season of innovation across every mode.",
+    addedWishlist: false
+  },
+  {
+    name: "Elden Ring", descp: "The New Fantasy Action RPG", url: "./assets/images/EldenRing.jpg",
+    detail: "THE NEW FANTASY ACTION RPG. Rise, Tarnished, and be guided by grace to brandish the power of the Elden Ring and become an Elden Lord in the Lands Between.",
+    addedWishlist: false
+  },
+  {
+    name: "Far Cry 6", descp: "Action Adventure FPS", url: "./assets/images/far-cry-6.jpg",
+    detail: "Embrace the gritty experience of an improvised modern-day guerrilla and take down a Dictator and his son to free Yara.",
     addedWishlist: false
   },
   ]
