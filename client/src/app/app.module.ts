@@ -1,20 +1,19 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HomeComponent } from './home/home.component';
-import { NavbarComponent } from './navbar/navbar.component';
-import { LoginComponent } from './login/login.component';
-import { RegisterComponent } from './register/register.component';
-import { LibraryComponent } from './library/library.component';
+import { HomeComponent } from './components/home/home.component';
+import { NavbarComponent } from './components/navbar/navbar.component';
+import { LoginComponent } from './components/login/login.component';
+import { RegisterComponent } from './components/register/register.component';
+import { LibraryComponent } from './components/library/library.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { SharedService } from './shared.service';
-import { UserListComponent } from './user-list/user-list.component';
-import { UpdateUserComponent } from './update-user/update-user.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
+import { SharedService } from './shared/shared.service';
+import { UserListComponent } from './components/user-list/user-list.component';
+import { UpdateUserComponent } from './components/update-user/update-user.component';
+import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
