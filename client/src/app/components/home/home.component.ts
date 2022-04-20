@@ -1,7 +1,10 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Games } from '../games';
-import { GamesService } from '../games.service';
+import { Games } from 'src/app/shared/games';
+import { GamesService } from 'src/app/shared/games.service';
+
+// import { Games } from '../../games';
+// import { GamesService } from '../../games.service';
 
 @Component({
   selector: 'app-home',

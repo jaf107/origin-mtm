@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { GamesService } from '../games.service';
+import { GamesService } from 'src/app/shared/games.service';
+// import { GamesService } from '../games.service';
 
 @Component({
   selector: 'app-view-game',
