@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#" style="color:#1dbbc1;"><img src="./assets/images/logo.png" height="35px"> Khela Hobe</a>
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,12 +9,12 @@
       <li class="nav-item active">
         <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
       </li>
-      
-    </ul><div class="" *ngIf="this.authService.isLoggedIn">
+    </ul>
+    <!-- <div class="" *ngIf="this.authService.isLoggedIn">
       <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-info my-2 my-sm-0" routerLink="/profile" type="submit">Dashboard</button>
+        <button class="btn btn-info my-2 my-sm-0" routerLink="/user-profile/:id" type="submit">Profile</button>
       </form>
-    </div>
+    </div> -->
     <div class="" *ngIf="!this.authService.isLoggedIn">
       <form class="form-inline my-2 my-lg-0">
         <button class="bookmark" routerLink="/wishlist"><svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-bookmarks-fill" viewBox="0 0 16 16">
@@ -28,7 +27,7 @@
     </div>
     <div class="" *ngIf="this.authService.isLoggedIn">
       <form class="form-inline my-2 my-lg-0">
-        <button class="btn btn-info my-2 my-sm-0" routerLink="/profile" type="submit" (click)="logout()">Logout</button>
+        <button class="btn btn-info my-2 my-sm-0" routerLink="/" type="submit" (click)="logout()">Logout</button>
       </form>
     </div>
   </div>
