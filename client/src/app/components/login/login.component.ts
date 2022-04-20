@@ -29,7 +29,7 @@ export class LoginComponent implements OnInit {
   }
 
   loginUser(){
-    // console.log(this.signinForm.value);
+    console.log(this.signinForm.value);
     this.authService.signIn(this.signinForm.value);
   }
 

@@ -8,7 +8,7 @@ const api = require('./routes/auth.routes')
 const url = 'mongodb+srv://originmtm:originmtm@cluster0.knfvs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
 
 mongoose
-  .connect(url,{useNewUrlParser: true})
+  .connect(url)
   .then((x) => {
     console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
   })
