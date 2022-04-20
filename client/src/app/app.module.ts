@@ -6,14 +6,11 @@ import { HomeComponent } from './components/home/home.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { LoginComponent } from './components/login/login.component';
 import { RegisterComponent } from './components/register/register.component';
-import { LibraryComponent } from './components/library/library.component';
+
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { UserProfileComponent } from './components/user-profile/user-profile.component';
 
-import { SharedService } from './shared/shared.service';
-import { UserListComponent } from './components/user-list/user-list.component';
-import { UpdateUserComponent } from './components/update-user/update-user.component';
-import { DashboardComponent } from './components/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -22,11 +19,7 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     NavbarComponent,
     LoginComponent,
     RegisterComponent,
-    LibraryComponent,
-    UserListComponent,
-    UpdateUserComponent,
-    DashboardComponent,
-
+    UserProfileComponent,
   ],
   imports: [
     BrowserModule,
@@ -35,7 +28,6 @@ import { DashboardComponent } from './components/dashboard/dashboard.component';
     FormsModule,
     ReactiveFormsModule
   ],
-  providers: [SharedService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

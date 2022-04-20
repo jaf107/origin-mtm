@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { UserService } from 'src/app/shared/user.service';
+import { AuthService } from 'src/app/shared/auth.service';
 
 
 @Component({
@@ -10,13 +10,15 @@ import { UserService } from 'src/app/shared/user.service';
 })
 export class NavbarComponent implements OnInit {
 
-  constructor(private userService: UserService, private router:Router) { }
-  isUserLoggedIn = false;
-  ngOnInit(): void {
-    this.isUserLoggedIn = this.userService.getLoggedIn();
-    console.log("Navbar Running");
-  }
+  constructor(public authService:AuthService,  private router:Router) { }
   
+  ngOnInit(): void {
+    
+  }
+  logout(){
+    this.authService.doLogout();
+  }
+
 
 
 }

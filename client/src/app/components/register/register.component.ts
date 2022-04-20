@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { User } from 'src/app/user';
-import { UserService } from 'src/app/shared/user.service';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,15 +9,25 @@ import { UserService } from 'src/app/shared/user.service';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor(private userService:UserService, private router:Router) { }
-  newUser = new User();
+  registerForm : FormGroup;
+  constructor(private authService: AuthService, private router:Router, private formBuilder: FormBuilder) {
+    this.registerForm = this.formBuilder.group({
+      name: [''],
+      email: [''],
+      password: ['']
+    })
+   }
+  
   ngOnInit(): void {
   }
   registerUser(){
-    console.log(this.newUser);
-    this.userService.addUser(this.newUser);
-    this.router.navigate(['userlist'])
+    console.log(this.registerForm.value);
+    this.authService.signUp(this.registerForm.value).subscribe((res)=>{
+      if(res.result){
+        this.registerForm.reset();
+        this.router.navigate(['login'])
+      }
+    })
   }
 
   login(){
