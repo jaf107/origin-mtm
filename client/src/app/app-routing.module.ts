@@ -19,7 +19,7 @@ const routes: Routes = [
   { path: 'viewGame', component: ViewGameComponent },
 
   {
-    path: 'profile/:id',
+    path: 'user-profile/:id',
     component: UserProfileComponent,
     canActivate: [AuthGuard]
   }
