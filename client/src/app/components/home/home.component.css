@@ -1,0 +1,69 @@
+/* .container{
+    margin: 10px 50px 10px 50px;
+    align-content: center;
+}
+.card{
+    margin: 50px 10px 5px !important;
+    border-radius: 2%;
+}
+.card-img-top{
+    height: 12rem;
+    border-radius: 2%;
+}
+.card-body{
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.card:hover{
+    transform: translate3d(0px, -1px, 0px);
+    transition: transform 0.15s ease-in ;
+    box-shadow: 0 10px 20px rgba(59, 165, 175, 0.12), 0 4px 8px rgba(59, 165, 175, 0.12);
+}
+.card-title{
+    margin-bottom: 20px;
+}
+a{
+    color: #1dbbc1;
+    padding-top: 5px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.col-3{
+    margin: 10px 10px 0px;
+} */
+
+/* *{padding: 0px; margin: 0px;} */
+
+.row{
+    padding: 5px 5px;
+    margin: 10px 10px 10px;
+}
+.game{
+    margin: 20px;
+    padding: 20px;
+}
+/* .card-img-top{
+    height: 12rem;
+    border-radius: 2%;
+} */
+.card-body{
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.card:hover{
+    transform: translate3d(0px, -1px, 0px);
+    transition: transform 0.15s ease-in ;
+    box-shadow: 0 10px 20px rgba(59, 165, 175, 0.12), 0 4px 8px rgba(59, 165, 175, 0.12);
+}
+.card-title{
+    margin-bottom: 20px;
+}
+a{
+    color: #1dbbc1;
+    padding-top: 5px;
+}
+a:hover{
+    text-decoration: none;
+}
