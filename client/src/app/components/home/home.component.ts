@@ -26,5 +26,9 @@ showGame(game:Games){
   this.route.navigate(['viewGame']);
 }
 
+addtoWishlist(game: Games){
+  this.gameservice.addToWishlist(game);
+}
+
 
 }

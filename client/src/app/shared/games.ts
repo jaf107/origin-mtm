@@ -3,4 +3,5 @@ export class Games{
     descp: string ="";
     url: string = "";
     detail: string = "";
+    addedWishlist: boolean = false;
 }

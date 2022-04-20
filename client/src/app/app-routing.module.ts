@@ -9,6 +9,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { AuthGuard } from './shared/auth.guard';
 import { ViewGameComponent } from './components/view-game/view-game.component';
 import { LibraryComponent } from './components/library/library.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 
 const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,7 +18,7 @@ const routes: Routes = [
   { path: 'dash', component: UserProfileComponent },
   { path: 'library',component: LibraryComponent},
   { path: 'viewGame', component: ViewGameComponent },
-
+  {path: 'wishlist', component: WishlistComponent},
   {
     path: 'profile/:id',
     component: UserProfileComponent,

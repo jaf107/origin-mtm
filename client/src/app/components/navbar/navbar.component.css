@@ -1,3 +1,18 @@
 button{
     margin: 5px;
 }
+.bookmark{
+    background-color: transparent;
+    border: none;
+    color: white;
+    padding-top: 5px;
+}
+.bookmark:active{
+    outline:none;
+}
+.bookmark:focus{
+    outline:none;
+}
+.bookmark:hover{
+    outline:none;
+}
