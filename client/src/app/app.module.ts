@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { SharedService } from './shared.service';
+import { ViewGameComponent } from './view-game/view-game.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +22,7 @@ import { SharedService } from './shared.service';
     LoginComponent,
     RegisterComponent,
     LibraryComponent,
+    ViewGameComponent,
 
   ],
   imports: [
