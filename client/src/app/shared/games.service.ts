@@ -21,7 +21,7 @@ export class GamesService {
     addedWishlist:false
   },
   {
-    name: "Apex Legends", descp: "Battle Royale Shooter Game", url: "./assets/images/ApexLegends.jpg",
+    name: "Apex Legends", descp: "Battle Royale Shooter Game", url: "./assets/images/Apex-Legends.jpg",
     detail: "Welcome to the next evolution of Hero Shooter. Conquer with character in Apex Legends, a free-to-play* Hero shooter where legendary characters with powerful abilities team up to battle for fame & fortune on the fringes of the Frontier.",
     addedWishlist: false
   },
