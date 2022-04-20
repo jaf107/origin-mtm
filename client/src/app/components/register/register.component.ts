@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormBuilder, Validators, NgForm } from '@angular/forms';
 import { Router } from '@angular/router';
-import { FormsModule } from '@angular/forms';
+import { FormBuilder, FormGroup } from '@angular/forms';
+import { AuthService } from 'src/app/shared/auth.service';
 
 @Component({
   selector: 'app-register',
@@ -9,16 +9,29 @@ import { FormsModule } from '@angular/forms';
   styleUrls: ['./register.component.css']
 })
 export class RegisterComponent implements OnInit {
-
-  constructor(private route: Router) { }
-
-
+  registerForm : FormGroup;
+  constructor(private authService: AuthService, private router:Router, private formBuilder: FormBuilder) {
+    this.registerForm = this.formBuilder.group({
+      name: [''],
+      email: [''],
+      password: ['']
+    })
+   }
+  
   ngOnInit(): void {
+  }
+  registerUser(){
+    console.log(this.registerForm.value);
+    this.authService.signUp(this.registerForm.value).subscribe((res)=>{
+      if(res.result){
+        this.registerForm.reset();
+        this.router.navigate(['login'])
+      }
+    })
   }
 
   login(){
-    this.route.navigate(['login']);
+    this.router.navigate(['login']);
   }
 
-  
 }
