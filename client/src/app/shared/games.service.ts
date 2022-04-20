@@ -22,7 +22,7 @@ export class GamesService {
     detail: "Welcome to the next evolution of Hero Shooter. Conquer with character in Apex Legends, a free-to-play* Hero shooter where legendary characters with powerful abilities team up to battle for fame & fortune on the fringes of the Frontier."
   },
   {
-    name: "CS:GO", descp: "Multiplayer FPS Game", url: "./assets/images/CSGO.jpg",
+    name: "CS:GO", descp: "Multiplayer FPS Game", url: "./assets/images/csgo.jpg",
     detail: "Counter-Strike: Global Offensive (CS: GO) expands upon the team-based action gameplay that it pioneered when it was launched 19 years ago. CS: GO features new maps, characters, weapons, and game modes, and delivers updated versions of the classic CS content (de_dust2, etc.)."
   },
   {
