@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+    </div>
+      <div class="row" style="width: 100%;" >
+          <div class="game" *ngFor="let game of allgames; let i = index">
+            <div class="card bg-dark text-light hover-shadow" style="width: 18rem; height: 21rem;"> 
+                  <img src={{game.url}} class="card-img-top" style="height: 12rem; width: 100%;">
+                  <div class="card-body">
+                    <br><br>
+                    <h4 class="card-title">{{game.name}}</h4>
+                    <p class="card-title">{{game.descp}}</p>
+                  </div>
+            </div>
+        </div>
+          </div>
+  </div>
+

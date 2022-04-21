@@ -1,0 +1,114 @@
+/* .container{
+    margin: 10px 50px 10px 50px;
+    align-content: center;
+}
+.card{
+    margin: 50px 10px 5px !important;
+    border-radius: 2%;
+}
+.card-img-top{
+    height: 12rem;
+    border-radius: 2%;
+}
+.card-body{
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.card:hover{
+    transform: translate3d(0px, -1px, 0px);
+    transition: transform 0.15s ease-in ;
+    box-shadow: 0 10px 20px rgba(59, 165, 175, 0.12), 0 4px 8px rgba(59, 165, 175, 0.12);
+}
+.card-title{
+    margin-bottom: 20px;
+}
+a{
+    color: #1dbbc1;
+    padding-top: 5px;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.col-3{
+    margin: 10px 10px 0px;
+} */
+
+/* *{padding: 0px; margin: 0px;} */
+
+.row{
+    padding: 5px 5px;
+    margin: 10px 10px 10px;
+}
+.game{
+    margin: 20px;
+    padding: 20px;
+}
+/* .card-img-top{
+    height: 12rem;
+    border-radius: 2%;
+} */
+.card-body{
+    padding-top: 0px;
+    padding-bottom: 20px;
+}
+.card:hover{
+    transform: translate3d(0px, -1px, 0px);
+    transition: transform 0.15s ease-in ;
+    box-shadow: 0 10px 20px rgba(59, 165, 175, 0.12), 0 4px 8px rgba(59, 165, 175, 0.12);
+}
+.card-title{
+    margin-bottom: 20px;
+}
+.wishlist{
+    background-color: transparent;
+    border: none;
+    color: #1dbbc1;
+    padding-top: 5px;
+}
+.wishlist:active{
+    outline:none;
+}
+.wishlist:focus{
+    outline:none;
+}
+.wishlist:hover{
+    outline:none;
+}
+a:hover{
+    text-decoration: none;
+}
+
+.input-group{
+    padding-left: 30px;
+}
+
+.input-group-text{
+    margin: 0px 0px 0px 10px;
+    border: 1px solid #1dbbc1 !important;
+    background-color:transparent;
+}
+
+.input-group-text:hover{
+    margin: 0px 0px 0px 10px;
+    background-color:#1dbbc1;
+}
+
+.input-group input{
+    width: 870px;
+}
+.searching{
+    margin: 20px;
+}
+
+.form-control{
+    border: none;
+}
+.form-control:active{
+    border-color: #1dbbc1;
+    outline: 0;
+}
+
+i{
+    color: white;
+}

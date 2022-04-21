@@ -1,4 +1,10 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { Games } from 'src/app/shared/games';
+import { GamesService } from 'src/app/shared/games.service';
+
+// import { Games } from '../../games';
+// import { GamesService } from '../../games.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +13,41 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HomeComponent implements OnInit {
 
-  constructor() { }
+  constructor(private gameservice: GamesService, private route: Router) { }
+
+  allgames = this.gameservice.getGames();
+
+  searchString:string = ""; 
 
   ngOnInit(): void {
   }
+
+  
+showGame(game:Games){
+  this.gameservice.setViewGame(game);
+  this.route.navigate(['viewGame']);
+}
+
+addtoWishlist(game: Games){
+  this.gameservice.addToWishlist(game);
+}
+
+search(): void {
+  if(this.searchString=="") {
+    this.allgames = this.gameservice.getGames();
+  }
+  else {
+    this.allgames = this.allgames.filter(game => game.name.toLowerCase().includes(this.searchString.toLowerCase()));
+    if(this.allgames.length==0) {
+      alert("No Game found");
+    }
+  }
+}
+
+reset(): void {
+  this.searchString = "";
+  this.allgames = this.gameservice.getGames();
+}
+
 
 }
