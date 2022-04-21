@@ -1,20 +1,18 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 // Define collection and schema
-let Employee = new Schema({
+let gameSchema = new Schema({
    name: {
       type: String
    },
-   email: {
+   descp: {
       type: String
    },
-   designation: {
+   url: {
       type: String
    },
-   phoneNumber: {
-      type: Number
+   addedWishlist: {
+      type: Boolean
    }
-}, {
-   collection: 'employees'
 })
-module.exports = mongoose.model('Employee', Employee)
+module.exports = mongoose.model('games', gameSchema)

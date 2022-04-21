@@ -3,17 +3,13 @@ const path = require('path')
 const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
+const connectDB = require('./database')
+
 // Connecting with mongo db
-mongoose
-  .connect('mongodb://127.0.0.1:27017/mydatabase')
-  .then((x) => {
-    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
-  })
-  .catch((err) => {
-    console.error('Error connecting to mongo', err.reason)
-  })
-// Setting up port with express js
-const employeeRoute = require('../backend/routes/employee.route')
+connectDB();
+
+
+const game = require('../backend/routes/game.route')
 const app = express()
 app.use(bodyParser.json())
 app.use(
@@ -22,9 +18,7 @@ app.use(
   }),
 )
 app.use(cors())
-app.use(express.static(path.join(__dirname, 'dist/mean-stack-crud-app')))
-app.use('/', express.static(path.join(__dirname, 'dist/mean-stack-crud-app')))
-app.use('/api', employeeRoute)
+app.use('/api', game)
 // Create port
 const port = process.env.PORT || 4000
 const server = app.listen(port, () => {
