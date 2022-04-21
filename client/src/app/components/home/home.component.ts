@@ -17,6 +17,8 @@ export class HomeComponent implements OnInit {
 
   allgames = this.gameservice.getGames();
 
+  searchString:string = ""; 
+
   ngOnInit(): void {
   }
 
@@ -28,6 +30,23 @@ showGame(game:Games){
 
 addtoWishlist(game: Games){
   this.gameservice.addToWishlist(game);
+}
+
+search(): void {
+  if(this.searchString=="") {
+    this.allgames = this.gameservice.getGames();
+  }
+  else {
+    this.allgames = this.allgames.filter(game => game.name.toLowerCase().includes(this.searchString.toLowerCase()));
+    if(this.allgames.length==0) {
+      alert("No Game found");
+    }
+  }
+}
+
+reset(): void {
+  this.searchString = "";
+  this.allgames = this.gameservice.getGames();
 }
 
 
