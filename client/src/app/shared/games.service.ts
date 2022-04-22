@@ -1,5 +1,10 @@
+import { HttpClient, HttpHeaders, HttpErrorResponse } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Router } from '@angular/router';
 import { Games } from './games';
+import { catchError, map } from 'rxjs/operators';
+import { Observable } from 'rxjs';
+
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +23,7 @@ export class GamesService {
   {
     name: "Valorant", descp: "5v5 character-based tactical FPS", url: "./assets/images/valorant-slide.jpg",
     detail: "Valorant is a tactical shooting game involving two teams with 5 players in each team. Every player can sign in and play remotely from anywhere in the world. Every game has 25 rounds and the team that wins 13 of them first wins the game. Players can choose their in-game characters called agents at the start of the game.",
-    addedWishlist:false
+    addedWishlist: false
   },
   {
     name: "Apex Legends", descp: "Battle Royale Shooter Game", url: "./assets/images/Apex-Legends.jpg",
@@ -52,11 +57,37 @@ export class GamesService {
   },
   ]
 
-  constructor() { }
+  endpoint: string = 'http://localhost:4000/api';
+  headers = new HttpHeaders().set('Content-Type', 'application/json');
+  games = [];
+  constructor(private http: HttpClient, public router: Router) { }
 
   gameToView = new Games();
 
   wishListGames: Games[] = [];
+
+  getAllGames(): Observable<any> {
+    let api = `${this.endpoint}/games`;
+    return this.http.get(api)
+      .pipe(map((res) => {
+        console.log("Res" + res);
+        return res || {};
+      }),
+        // catchError(console.log())
+      );
+  }
+
+  handleError(error: HttpErrorResponse) {
+    let msg = '';
+    if (error.error instanceof ErrorEvent) {
+      // client-side error
+      msg = error.error.message;
+    } else {
+      // server-side error
+      msg = `Error Code: ${error.status}\nMessage: ${error.message}`;
+    }
+    // return throwError(msg);
+  }
 
   getGames(): Games[] {
     return this.game;
@@ -74,18 +105,18 @@ export class GamesService {
     return this.gameToView.url;
   }
 
-  addToWishlist(gametoadd: Games){
-    if(gametoadd.addedWishlist){
+  addToWishlist(gametoadd: Games) {
+    if (gametoadd.addedWishlist) {
       gametoadd.addedWishlist = false;
-      this.wishListGames=this.wishListGames.filter(Games => Games.name!=gametoadd.name);
+      this.wishListGames = this.wishListGames.filter(Games => Games.name != gametoadd.name);
     }
-    else{
+    else {
       gametoadd.addedWishlist = true;
       this.wishListGames.push(gametoadd);
     }
   }
 
-  getWishlist(): Games[]{
+  getWishlist(): Games[] {
     return this.wishListGames;
   }
 

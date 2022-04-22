@@ -4,10 +4,11 @@ const mongoose = require('mongoose')
 const cors = require('cors')
 const bodyParser = require('body-parser')
 const connectDB = require('./database')
+// const { seedDB1 } = require('/seeds.js')
 
 // Connecting with mongo db
 connectDB();
-
+// seedDB1();
 
 const game = require('../backend/routes/game.route')
 const app = express()
@@ -34,3 +35,4 @@ app.use(function (err, req, res, next) {
   if (!err.statusCode) err.statusCode = 500 // If err has no specified error code, set error code to 'Internal Server Error (500)'
   res.status(err.statusCode).send(err.message) // All HTTP requests must have a response, so let's send back an error with its status code and message
 })
+

@@ -16,15 +16,23 @@ export class HomeComponent implements OnInit {
   constructor(private gameservice: GamesService, private route: Router) { }
 
   allgames = this.gameservice.getGames();
+  // games: = [];
 
   searchString:string = ""; 
 
   ngOnInit(): void {
   }
 
-  
+  fetchGames(){
+    this.gameservice.getAllGames().subscribe((res:{}) =>{
+      console.log(res)
+      // this.games = res;
+    } )
+  }
 showGame(game:Games){
   this.gameservice.setViewGame(game);
+  console.log(this.gameservice.getAllGames());
+
   this.route.navigate(['viewGame']);
 }
 

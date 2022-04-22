@@ -53,6 +53,11 @@
       await game.insertMany(allGames);
   };
 
+  exports.seedDB1= async() => {
+    await game.deleteMany({});
+    await game.insertMany(allGames);
+  }
+
   seedDB().then(() =>{
       mongoose.connection.close();
   });
