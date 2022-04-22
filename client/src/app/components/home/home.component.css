@@ -60,10 +60,87 @@ a:hover{
 .card-title{
     margin-bottom: 20px;
 }
-a{
+.wishlist{
+    background-color: transparent;
+    border: none;
     color: #1dbbc1;
     padding-top: 5px;
 }
+.wishlist:active{
+    outline:none;
+}
+.wishlist:focus{
+    outline:none;
+}
+.wishlist:hover{
+    outline:none;
+}
 a:hover{
     text-decoration: none;
+}
+
+.input-group{
+    padding-left: 30px;
+}
+
+.input-group-text{
+    margin: 0px 0px 0px 10px;
+    border: 1px solid #1dbbc1 !important;
+    background-color:transparent;
+}
+
+.input-group-text:hover{
+    margin: 0px 0px 0px 10px;
+    background-color:#1dbbc1;
+}
+
+.input-group input{
+    width: 870px;
+}
+.searching{
+    margin: 20px;
+}
+
+.form-control{
+    border: none;
+}
+.form-control:active{
+    border-color: #1dbbc1;
+    outline: 0;
+}
+
+i{
+    color: white;
+}
+.carousel-fade .carousel-item {
+	opacity: 0;
+	transition-duration: 1s;
+	transition-property: opacity;
+}
+
+.carousel-fade .carousel-item.active,
+.carousel-fade .carousel-item-next.carousel-item-left,
+.carousel-fade .carousel-item-prev.carousel-item-right {
+	opacity: 1;
+}
+
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-right {
+	opacity: 0;
+}
+
+.carousel-fade .carousel-item-next,
+.carousel-fade .carousel-item-prev,
+.carousel-fade .carousel-item.active,
+.carousel-fade .active.carousel-item-left,
+.carousel-fade .active.carousel-item-prev {
+	transform: translateX(0);
+	transform: translate3d(0, 0, 0);
+}
+
+.carousel-control-next,.carousel-control-prev{
+    background-color: transparent !important;
+    color: white;
+    width: 10%;
+    border: 0;
 }

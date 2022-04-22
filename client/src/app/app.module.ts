@@ -14,6 +14,7 @@ import { UserProfileComponent } from './components/user-profile/user-profile.com
 import { SharedService } from './shared/shared.service';
 // import { SharedService } from './shared.service';
 import { ViewGameComponent } from './components/view-game/view-game.component';
+import { WishlistComponent } from './components/wishlist/wishlist.component';
 // import { ViewGameComponent } from './view-game/view-game.component';
 
 @NgModule({
@@ -25,7 +26,7 @@ import { ViewGameComponent } from './components/view-game/view-game.component';
     RegisterComponent,
     UserProfileComponent,
     ViewGameComponent,
-
+    WishlistComponent,
   ],
   imports: [
     BrowserModule,

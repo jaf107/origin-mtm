@@ -1,4 +1,7 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+
 body{
-    background-color: rgb(23, 23, 23);
+    background-image: radial-gradient(rgb(25, 52, 74), rgb(15, 17, 19));
+    /* background-color: rgb(23, 23, 23); */
 }
