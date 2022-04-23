@@ -15,11 +15,19 @@ export class HomeComponent implements OnInit {
 
   constructor(private gameservice: GamesService, private route: Router) { }
 
-  allgames = this.gameservice.getGames();
+  showingGames:any;
 
   searchString:string = ""; 
 
+  AllGames= new Array<Games>();
+
   ngOnInit(): void {
+    this.gameservice.getAllGames().subscribe(res=>{
+      console.log(res.db);
+      this.AllGames = res.db;
+      this.showingGames = this.AllGames;
+      this.gameservice.setGamesfromAPI(this.AllGames);
+    }, err=>{console.log(err)});
   }
 
   
@@ -34,11 +42,11 @@ addtoWishlist(game: Games){
 
 search(): void {
   if(this.searchString=="") {
-    this.allgames = this.gameservice.getGames();
+    this.showingGames = this.AllGames;
   }
   else {
-    this.allgames = this.allgames.filter(game => game.name.toLowerCase().includes(this.searchString.toLowerCase()));
-    if(this.allgames.length==0) {
+    this.showingGames = this.AllGames.filter(game => game.name.toLowerCase().includes(this.searchString.toLowerCase()));
+    if(this.showingGames.length==0) {
       alert("No Game found");
     }
   }
@@ -46,7 +54,7 @@ search(): void {
 
 reset(): void {
   this.searchString = "";
-  this.allgames = this.gameservice.getGames();
+  this.showingGames = this.AllGames;
 }
 
 
