@@ -5,10 +5,14 @@ const cors = require('cors')
 const bodyParser = require('body-parser')
 const connectDB = require('./database')
 
+const api = require('./routes/auth.routes')
+const url = 'mongodb+srv://originmtm:originmtm@cluster0.knfvs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+const localurl = 'mongodb://127.0.0.1:27017/mydatabase';
+
 // Connecting with mongo db
 connectDB();
 
-
+const user = require('./routes/auth.routes')
 const game = require('../backend/routes/game.route')
 const app = express()
 app.use(bodyParser.json())
@@ -19,6 +23,9 @@ app.use(
 )
 app.use(cors())
 app.use('/api', game)
+
+app.use('/public', express.static('public'))
+app.use('/api', user)
 // Create port
 const port = process.env.PORT || 4000
 const server = app.listen(port, () => {

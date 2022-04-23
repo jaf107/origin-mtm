@@ -41,7 +41,7 @@
     </button>
   </div>
   <div class="row" style="width: 100%;">
-    <div class="game" *ngFor="let game of allgames;let i = index ">
+    <div class="game" *ngFor="let game of showingGames;let i = index ">
       <div class="card bg-dark text-light hover-shadow" style="width: 17rem; height: 22rem;">
         <img src={{game.url}} class="card-img-top" style="height: 12rem; width: 100%;" (click)="showGame(game)">
         <div class="card-body">

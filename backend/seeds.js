@@ -1,4 +1,20 @@
+const express = require('express')
+const mongoose = require('mongoose')
+const game = require('./models/games')
 
+
+// Connecting with mongo db
+
+const url = 'mongodb+srv://originmtm:originmtm@cluster0.knfvs.mongodb.net/myFirstDatabase?retryWrites=true&w=majority';
+
+ mongoose
+  .connect(url)
+  .then((x) => {
+    console.log(`Connected to Mongo! Database name: "${x.connections[0].name}"`)
+  })
+  .catch((err) => {
+    console.error('Error connecting to mongo', err.reason)
+  })
 
   const allGames = [
     {

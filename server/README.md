@@ -1,8 +1,5 @@
 # node-token-based-authentication
 
-Node Token-based Authentication REST APIs tutorial with examples - learn how to build a secure user authentication CRUD APIs using JSON web token.
-
-
 ## Written Article
 [Build Secure (JWT) Token Based Authentication API with Node](https://www.positronx.io/build-secure-jwt-token-based-authentication-api-with-node/)
 

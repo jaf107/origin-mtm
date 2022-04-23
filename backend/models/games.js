@@ -11,6 +11,9 @@ let gameSchema = new Schema({
    url: {
       type: String
    },
+   detail:{
+      type: String
+   },
    addedWishlist: {
       type: Boolean
    }
